@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/registration.css') }}">
+    <title> {{ title }} </title>
+</head>
+
+<body>
+    <section>
+        <form action="{{ '/' + title}}" method="post">
+            <p></p>
+            <h1> {{title}} </h1>
+            <div class="inputbox">
+                <ion-icon name="star"></ion-icon>
+                <input type="text" name="NickName" required>
+                <label for="">NickName</label>
+            </div>
+            <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="password" name="password" required>
+                <label for="">Password</label>
+            </div>
+            {% block rang -%}
+            {% endblock %}
+            <div class="forget">
+                <label for=""><input type="checkbox">Remember Me</label>
+            </div>
+            <button type="submit"> {{title}} </button>
+            <div class="register">
+                {% block register_login -%}
+                <p>Don't have an account? <a href="{{ url_for('registration') }}">Register</a></p>
+                {% endblock %}
+            </div>
+        </form>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

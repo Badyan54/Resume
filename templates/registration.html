@@ -1,0 +1,18 @@
+{% extends 'login.html' %}
+
+{% block rang -%}
+
+<div class="inputbox">
+    <ion-icon name="star"></ion-icon>
+    <input type="text" name="Rang" required>
+    <label for="">Rang</label>
+</div>
+{% endblock %}
+
+{% block register_login -%}
+<p>have a account?<a href="{{ url_for('login') }}">Login</a></p>
+{% endblock %}
+
+
+
+

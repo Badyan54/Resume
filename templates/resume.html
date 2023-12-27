@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>My resume</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/style.css') }}">
+</head>
+
+<body>
+
+    <!--Wrapper-->
+    <div class="wrapper">
+        <!--Main content -->
+        <div class="main-content">
+            <!--My info-->
+            <div class="my-info">
+                <h2 class="my-profeshen">Python Developer</h2>
+
+                <h1 class="my-name">Bohdan Mihlazov</h1>
+
+                <p class="my-descr">Я хвацький парубок</p>
+                <h2>About me</h2>
+                <p class="my-descr">Люблю вирішувати всякі логіко-математичні задачі, не заспокоююсь поки не вирішу помилку навіть якщо на це піде час
+                (я вважаю що це +). Мені подобаєть дистанційна форма організації праці, там я почуваю себе більш комфортно
+                і можу бути більш продуктивним. Мушу визнати що на опанування нових речей можу витрачати бальше часу ніж хотілося б,
+                але вони так краще запам'ятовуються. Я спочатку стрибав з мови на мову: js, с++, а зараз зупинився на python,
+                створював різного виду програми: сайти, ігри, телеграм боти(один з них вмів визначати сумісність імен і з цього
+                вибудовував
+                графіки любовних ліній осіб). В цілому майже за рік мені все ще подобається програмувати, тому хотілося б знайти роботу.
+                </p>
+            </div>
+            <!--My projects-->
+            <div class="my-projects-conteiner">
+                <h3 class="my-projects-title">Projects</h3>
+                <ol class="my-projects-list">
+                    <li class="my-project-item">
+                        <a class="my-projects-link" href="https://hellen.p.goit.global/"
+                            target="_blank"></a>
+                        <span class="my-projects-tech">Ось це він тут</span>
+                    </li>
+                    <!-- <li class="my-project-item">
+                        <a class="my-projects-link" href="https://cryptohub.p.goit.global/"
+                            target="_blank">https://cryptohub.p.goit.global/</a>
+                        <span class="my-projects-tech">[ JavaScript ]</span>
+                    </li>
+                    <li class="my-project-item">
+                        <a class="my-projects-link" href="https://kidslike.p.goit.global/"
+                            target="_blank">https://kidslike.p.goit.global/</a>
+                        <span class="my-projects-tech">[ React.js, Node.js ]</span>
+                    </li>  -->
+                </ol>
+            </div>
+            <!--Work experience-->
+            <div>
+                <h3 class="work-expirience-title">Work experience</h3>
+                <!--Compani 1-->
+                <div class="work-expirience-conteiner">
+                    <h4 class="work-expirience-compani">Python Developer <span class="compani-name">Freelance</span>
+                    </h4>
+                    <p class="work-expirience-period">January 2023 - up to now <span
+                            class="work-expirience-period-separator">|</span>Ukrain</p>
+
+                    <ul class="work-expirience-duti-list">
+                        <li class="work-expirience-duti-item">Поки-що пусто</li>
+                        <!-- <li class="work-expirience-duti-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </li>
+                        <li class="work-expirience-duti-item">Risus commodo viverra maecenas. </li>
+                        <li class="work-expirience-duti-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod. </li> -->
+                    </ul>
+
+                </div>
+                <!--Compani 2-->
+                <!-- <div class="work-expirience-conteiner">
+                    <h4 class="work-expirience-compani">Manager <span class="compani-name">Banderogusak & Co.</span>
+                    </h4>
+                    <p class="work-expirience-period">March 2015 - October 2018 <span
+                            class="work-expirience-period-separator">|</span> Country</p>
+
+                    <ul class="work-expirience-duti-list">
+                        <li class="work-expirience-duti-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod labore et dolore magna aliqua. </li>
+                        <li class="work-expirience-duti-item">Quis ipsum suspendisse ultrices gravida.</li>
+                        <li class="work-expirience-duti-item">Risus commodo viverra maecenas. </li>
+                    </ul>
+
+                </div> -->
+
+                <!--Compani 3-->
+                <!-- <div class="work-expirience-conteiner">
+                    <h4 class="work-expirience-compani">Manager <span class="compani-name">BestUA Corp.</span></h4>
+                    <p class="work-expirience-period">June 2014 - February 2015 <span
+                            class="work-expirience-period-separator">|</span> Country</p>
+
+                    <ul class="work-expirience-duti-list">
+                        <li class="work-expirience-duti-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </li>
+                        <li class="work-expirience-duti-item">Quis ipsum suspendisse ultrices gravida.</li>
+                        <li class="work-expirience-duti-item">Risus commodo viverra maecenas. </li>
+                    </ul>
+
+                </div> -->
+            </div>
+            <!--Education-->
+            <div>
+                <h3 class="my-education-title">Education</h3>
+                <p class="my-education-osvita">Colege Nechuya Leviczkogo</p>
+                <p class="my-facultet">Low</p>
+                <p class="my-education-period">
+                    September 2019 - June 2023 <span class="my-education-period-separator">|</span> Country
+                </p>
+            </div>
+        </div>
+        <!--Sidebar-->
+        <aside class="sidebar">
+            <img src="{{ url_for('static', filename = 'img/My_photo.jpg') }}" alt="My photo" width="370px" height="370">
+            <div class="saidbar-content">
+                <!--Contacts-->
+                <div class="conteiners-sidebar">
+                    <h3 class="sidebar-titles">Contacts</h3>
+                    <p class="contacts-item">
+                        <span class="contacts-type">C:</span>
+                        <a class="contacts-linck" href="tel:+380689631302">+38 068 963 13 02</a>
+                    </p>
+                    <p class="contacts-item">
+                        <span class="contacts-type">E:</span>
+                        <a class="contacts-linck" href="mailto:bogdanwov@gmail.com">bogdanwov@gmail.com</a>
+                    </p>
+                </div>
+
+                <!--Tech skillls-->
+                <div class="conteiners-sidebar">
+                    <h3 class="sidebar-titles">Tech skillls</h3>
+                    <ul class="skils-list">
+                        <li class="skils-list-item">HTML5</li>
+                        <li class="skils-list-item">CSS3</li>
+                        <li class="skils-list-item">GIT</li>
+                        <li class="skils-list-item">Django</li>
+                        <li class="skils-list-item">Flask</li>
+                        <li class="skils-list-item">Python</li>
+                        <!-- <li class="skils-list-item"></li> -->
+                    </ul>
+                </div>
+
+                <!--Soft Skills-->
+                <div class="conteiners-sidebar">
+                    <h3 class="sidebar-titles">Soft Skills</h3>
+                    <ul class="skils-list">
+                        <li class="skils-list-item">Scrum</li>
+                        <li class="skils-list-item">Agile</li>
+                        <li class="skils-list-item">GTD</li>
+                        <li class="skils-list-item">Teamwork</li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+    <form action="/resume" method="post">
+        <textarea name="commentar" id="" cols="150" rows="2" required></textarea>
+        <input type="submit" value = "Comment">
+    </form> 
+    {% for com in comment %}
+    <div class ="commentar">{{ com.comment }}</div>
+    {% endfor %}
+</body>
+
+</html>
+
+
