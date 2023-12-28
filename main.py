@@ -1,11 +1,11 @@
 from flask import Flask, render_template, url_for, request, flash, get_flashed_messages
 from flask import session, redirect, abort, g
 from db import FDataBase
-import sqlite3, os
+import sqlite3, os, secrets
 
 DATABASE = "coments.db"
-DEBUG = True 
-SECRET_KEY = "WLEIFJWW7EF6W6F5WE5F5DSddd"
+DEBUG = False
+SECRET_KEY = secrets.token_hex(16)
 
 app = Flask(__name__)
 app.config.from_object(__name__)
