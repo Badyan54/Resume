@@ -12,9 +12,7 @@ app.config.from_object(__name__)
 
 app.config.update(dict(DATABASE = os.path.join(app.root_path, "coments.db")))
 
-@app.route('/')
-def index():
-    return render_template("index.html")
+
 
 @app.route("/registration", methods = ["POST", "GET"])
 def registration():
@@ -30,6 +28,7 @@ def registration():
 
     return render_template("registration.html", title = 'registration')
 
+@app.errorhandler(401)
 @app.errorhandler(404)
 def page_not_found(error):
     return render_template('not_found.html' )
@@ -50,7 +49,7 @@ def resume():
     dbase = FDataBase(db)
 
     if request.method == "POST":
-        res = dbase.addPost(request.form.get(("commentar")))
+        res = dbase.addPost(request.form.get("commentar"), session["userLogged"])
         return redirect(url_for('resume'))
 
     return render_template("resume.html", comment = dbase.get_comment())
@@ -85,22 +84,6 @@ def get_db():
 def close_db(error):
     if hasattr(g, 'link_db'):
         g.link_db.close()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 if __name__ == "__main__":
     app.run(debug = True)

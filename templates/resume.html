@@ -14,7 +14,7 @@
 </head>
 
 <body>
-
+    
     <!--Wrapper-->
     <div class="wrapper">
         <!--Main content -->
@@ -25,7 +25,7 @@
 
                 <h1 class="my-name">Bohdan Mihlazov</h1>
 
-                <p class="my-descr">Я хвацький парубок</p>
+                <p class="my-descr">Хвацький парубок</p>
                 <h2>About me</h2>
                 <p class="my-descr">Люблю вирішувати всякі логіко-математичні задачі, не заспокоююсь поки не вирішу помилку навіть якщо на це піде час
                 (я вважаю що це +). Мені подобаєть дистанційна форма організації праці, там я почуваю себе більш комфортно
@@ -142,9 +142,10 @@
                         <li class="skils-list-item">HTML5</li>
                         <li class="skils-list-item">CSS3</li>
                         <li class="skils-list-item">GIT</li>
+                        <li class="skils-list-item">Python</li>
                         <li class="skils-list-item">Django</li>
                         <li class="skils-list-item">Flask</li>
-                        <li class="skils-list-item">Python</li>
+                        <li class="skils-list-item">SQL</li>
                         <!-- <li class="skils-list-item"></li> -->
                     </ul>
                 </div>
@@ -157,19 +158,30 @@
                         <li class="skils-list-item">Agile</li>
                         <li class="skils-list-item">GTD</li>
                         <li class="skils-list-item">Teamwork</li>
+                        
                     </ul>
                 </div>
             </div>
         </aside>
 
     </div>
-    <form action="/resume" method="post">
-        <textarea name="commentar" id="" cols="150" rows="2" required></textarea>
-        <input type="submit" value = "Comment">
-    </form> 
-    {% for com in comment %}
-    <div class ="commentar">{{ com.comment }}</div>
-    {% endfor %}
+    <div class="comments">
+
+        <div class="coments_chaild">
+            <form action="/resume" method="post">
+                <textarea type="text" name="commentar" id="" maxlength="200" required>Я хочу від тебе дітей</textarea><br>
+                <button type="submit">Comment</button>
+            </form>
+        
+        {% for com in comment %}
+        <div class="comment">
+            <h4> {{com.NickName}}: </h2>
+            <p> {{com.Rang}} </p>
+            <h6> {{ com.comment }}</h6>
+        </div>
+        {% endfor %}
+    </div>
+    </div>
 </body>
 
 </html>

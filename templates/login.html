@@ -16,12 +16,12 @@
             <h1> {{title}} </h1>
             <div class="inputbox">
                 <ion-icon name="star"></ion-icon>
-                <input type="text" name="NickName" required>
+                <input type="text" name="NickName" maxlength="28" required>
                 <label for="">NickName</label>
             </div>
             <div class="inputbox">
                 <ion-icon name="lock-closed-outline"></ion-icon>
-                <input type="password" name="password" required>
+                <input type="password" name="password" maxlength="28" required>
                 <label for="">Password</label>
             </div>
             {% block rang -%}
