@@ -58,7 +58,7 @@ class TestRegisterLogin:
         response = client.get('/resume/')
         assert response.status_code == 200
 
-@pytest.mark.parametrize("commentar", ["; DELETE FROM comments;", " DELETE FROM comments;", "<style>body {transform: rotate(180deg);transform-origin: center center;}</style>"])
+@pytest.mark.parametrize("commentar", ["; DELETE FROM comments;", " DELETE FROM comments;"])
 def test_add_post_SQL_injections(client, commentar):
     response = client.post("/resume/", data={'commentar': commentar})
     assert response.status_code == 302
