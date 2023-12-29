@@ -1,5 +1,5 @@
 from flask import Flask, render_template, url_for, request, flash, get_flashed_messages
-from flask import session, redirect, abort, g
+from flask import session, redirect, abort, g, make_response
 from db import FDataBase
 import sqlite3, os, secrets
 
@@ -9,9 +9,7 @@ SECRET_KEY = secrets.token_hex(16)
 
 app = Flask(__name__)
 app.config.from_object(__name__)
-
 app.config.update(dict(DATABASE = os.path.join(app.root_path, "coments.db")))
-
 
 
 @app.route("/registration", methods = ["POST", "GET"])
@@ -31,20 +29,13 @@ def registration():
 @app.errorhandler(401)
 @app.errorhandler(404)
 def page_not_found(error):
-    return render_template('not_found.html' )
-    
-
-@app.route("/profile/<username>")
-def profile(username):
-    if "userLogged" not in session or session["userLogged"] != username:
-        abort(401)
-    return render_template("profile.html")
+    return render_template('not_found.html')
 
 
 @app.route("/resume/", methods = ["POST", "GET"])
 def resume():
     if "userLogged" not in session:
-        abort(401)
+        return make_response(render_template("not_found.html"), 401)
     db = get_db()
     dbase = FDataBase(db)
 
@@ -86,4 +77,4 @@ def close_db(error):
         g.link_db.close()
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug = True)

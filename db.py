@@ -40,7 +40,6 @@ class FDataBase:
             if res: return res
         except:
             print("error")
-        return []
 
     def addUser(self, NickName, password, rang):
         try:
