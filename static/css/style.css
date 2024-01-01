@@ -1,6 +1,9 @@
 body{
     background: #003;
     padding: 40px 40px 40px 40px;
+    word-wrap: break-word;
+        /* Автоматично переносити слова */
+    white-space: normal;
 }
 
 ul, ol{
@@ -8,14 +11,13 @@ ul, ol{
     margin-bottom: 0;
 }
 
-.wrapper{
-    width: 1200px;
+.wrapper {
+
     display: flex;
     flex-direction: row-reverse;
     background: #FFF;
     margin: 0 auto;
 }
-
 .main-content{
     padding: 88px 80px 40px 80px;
     box-sizing: border-box;
@@ -150,54 +152,6 @@ ul, ol{
     margin-bottom: 40px;
 }
 
-.work-expirience-title{
-    color: #000;
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 27px;
-    margin-top: 0;
-    margin-bottom: 8px;
-}
-
-.work-expirience-compani{
-    color: #000;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 20px;
-    margin-top: 0;
-    margin-bottom: 12px;
-}
-
-.compani-name{
-    color: #6D9BF5;
-}
-
-.work-expirience-period{
-    color: #A8A8A8;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 15px;
-    margin-bottom: 8px;
-}
-
-.work-expirience-period-separator{
-    color: #000;
-}
-
-.work-expirience-duti-list{
-    padding-left: 16px;
-}
-
-.work-expirience-duti-item{
-    color: #595959;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 24px;
-}
-
-.work-expirience-conteiner{
-    margin-bottom: 12px;
-}
 
 .my-education-title{
     color: #000;
@@ -236,7 +190,7 @@ ul, ol{
 
 .comments{
 
-    width: 1200px;
+    width: 100%;
     background: #FFF;
     margin: 0 auto;
     margin-left: auto;
@@ -246,7 +200,7 @@ ul, ol{
 form{
     text-align: right;
 }
-.coments_chaild{
+.comments_chaild{
     margin-top:20px ;
     padding: 10px;
     background: #A8A8A8;
@@ -295,3 +249,4 @@ button{
 h6{
     margin-top: 0;
 }
+

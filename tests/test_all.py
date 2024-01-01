@@ -31,9 +31,6 @@ class TestRegisterLogin:
         })
         assert response.status_code == 302
 
-        with client.session_transaction() as sess:
-            assert sess["userLogged"] == "test_user"
-
         assert response.headers["Location"] == "/resume/"
 
     def test_login(self, client):

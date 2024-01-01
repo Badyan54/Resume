@@ -8,9 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <title>My resume</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/adapt_screen.css') }}">
 
-    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/style.css') }}">
+    <title>My resume</title>
 </head>
 
 <body>
@@ -45,69 +45,13 @@
                             target="_blank"></a>
                         <span class="my-projects-tech">Ось це він тут</span>
                     </li>
-                    <!-- <li class="my-project-item">
-                        <a class="my-projects-link" href="https://cryptohub.p.goit.global/"
-                            target="_blank">https://cryptohub.p.goit.global/</a>
-                        <span class="my-projects-tech">[ JavaScript ]</span>
-                    </li>
-                    <li class="my-project-item">
-                        <a class="my-projects-link" href="https://kidslike.p.goit.global/"
-                            target="_blank">https://kidslike.p.goit.global/</a>
-                        <span class="my-projects-tech">[ React.js, Node.js ]</span>
-                    </li>  -->
+
                 </ol>
             </div>
-            <!--Work experience-->
-            <div>
-                <h3 class="work-expirience-title">Work experience</h3>
-                <!--Compani 1-->
-                <div class="work-expirience-conteiner">
-                    <h4 class="work-expirience-compani">Python Developer <span class="compani-name">Freelance</span>
-                    </h4>
-                    <p class="work-expirience-period">January 2023 - up to now <span
-                            class="work-expirience-period-separator">|</span>Ukrain</p>
+ 
 
-                    <ul class="work-expirience-duti-list">
-                        <li class="work-expirience-duti-item">Поки-що пусто</li>
-                        <!-- <li class="work-expirience-duti-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </li>
-                        <li class="work-expirience-duti-item">Risus commodo viverra maecenas. </li>
-                        <li class="work-expirience-duti-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod. </li> -->
-                    </ul>
 
-                </div>
-                <!--Compani 2-->
-                <!-- <div class="work-expirience-conteiner">
-                    <h4 class="work-expirience-compani">Manager <span class="compani-name">Banderogusak & Co.</span>
-                    </h4>
-                    <p class="work-expirience-period">March 2015 - October 2018 <span
-                            class="work-expirience-period-separator">|</span> Country</p>
-
-                    <ul class="work-expirience-duti-list">
-                        <li class="work-expirience-duti-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod labore et dolore magna aliqua. </li>
-                        <li class="work-expirience-duti-item">Quis ipsum suspendisse ultrices gravida.</li>
-                        <li class="work-expirience-duti-item">Risus commodo viverra maecenas. </li>
-                    </ul>
-
-                </div> -->
-
-                <!--Compani 3-->
-                <!-- <div class="work-expirience-conteiner">
-                    <h4 class="work-expirience-compani">Manager <span class="compani-name">BestUA Corp.</span></h4>
-                    <p class="work-expirience-period">June 2014 - February 2015 <span
-                            class="work-expirience-period-separator">|</span> Country</p>
-
-                    <ul class="work-expirience-duti-list">
-                        <li class="work-expirience-duti-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </li>
-                        <li class="work-expirience-duti-item">Quis ipsum suspendisse ultrices gravida.</li>
-                        <li class="work-expirience-duti-item">Risus commodo viverra maecenas. </li>
-                    </ul>
-
-                </div> -->
-            </div>
+       
             <!--Education-->
             <div>
                 <h3 class="my-education-title">Education</h3>
@@ -120,9 +64,10 @@
         </div>
         <!--Sidebar-->
         <aside class="sidebar">
-            <img src="{{ url_for('static', filename = 'img/My_photo.jpg') }}" alt="My photo" width="370px" height="370">
+            <img src="{{ url_for('static', filename = 'img/My_photo.jpg') }}" alt="My photo" width="320px" height="370">
             <div class="saidbar-content">
                 <!--Contacts-->
+                <div class="skills-row">
                 <div class="conteiners-sidebar">
                     <h3 class="sidebar-titles">Contacts</h3>
                     <p class="contacts-item">
@@ -134,7 +79,7 @@
                         <a class="contacts-linck" href="mailto:bogdanwov@gmail.com">bogdanwov@gmail.com</a>
                     </p>
                     <p class="contacts-item">
-                        <span class="contacts-type">Github</span>
+                        <span class="contacts-type">Github:</span>
                         <a class="contacts-linck" href="https://github.com/Badyan54">VFstudio</a>
                     </p>
                 </div>
@@ -154,7 +99,7 @@
                         <!-- <li class="skils-list-item"></li> -->
                     </ul>
                 </div>
-
+                </div>
                 <!--Soft Skills-->
                 <div class="conteiners-sidebar">
                     <h3 class="sidebar-titles">Soft Skills</h3>
@@ -172,7 +117,7 @@
     </div>
     <div class="comments">
 
-        <div class="coments_chaild">
+        <div class="comments_chaild">
             <form action="/resume" method="post">
                 <textarea type="text" name="commentar" id="" maxlength="200" required>Я хочу від тебе дітей</textarea><br>
                 <button type="submit">Comment</button>
