@@ -1,0 +1,328 @@
+body{
+    background: #003;
+    padding: 40px 40px 40px 40px;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+ul, ol{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.wrapper {
+
+    display: flex;
+    flex-direction: row-reverse;
+    background: #FFF;
+    margin: 0 auto;
+}
+.main-content{
+    padding: 88px 80px 40px 80px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/*Sidebar*/
+.sidebar{
+    width: 370px;
+    background: #E0EBFE;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+}
+
+.saidbar-content{
+    padding:40px 40px 40px;
+    box-sizing: border-box;
+}
+
+.sidebar-titles{
+    color: #161D2A;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.contacts-type{
+    color: #161D2A;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-right: 8px;
+}
+
+.contacts-linck{
+    color: #2979FF;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-decoration-line: underline;
+}
+
+.contacts-item{
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+
+.conteiners-sidebar{
+    margin-bottom: 40px;
+}
+
+.skils-list{
+    padding-left: 16px;
+}
+
+.skils-list-item{
+    color: #161D2A;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.my-profeshen{
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.my-name{
+    color: #000;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 55px;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.my-descr{
+    color: #595959;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.my-info{
+    margin-bottom: 40px;
+}
+
+.my-projects-title{
+    color: #000;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 27px;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.my-projects-list{
+    padding-left: 16px;
+}
+
+.my-project-item{
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.my-projects-link{
+    color: #005FFF;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-decoration-line: underline;
+}
+.my-projects-tech{
+    color: #595959;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.my-projects-conteiner{
+    margin-bottom: 40px;
+}
+
+
+.my-education-title{
+    color: #000;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 4px;
+}
+.my-education-osvita{
+    color: #6D9BF5;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+.my-facultet{
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+.my-education-period{
+    color: #A8A8A8;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+.my-education-period-separator{
+    color: #000000;
+}
+
+.comments{
+
+    width: 100%;
+    background: #FFF;
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form{
+    text-align: right;
+}
+.comments_chaild{
+    margin-top:20px ;
+    padding: 10px;
+    background: #A8A8A8;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+textarea{
+
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding: 0;
+    width: 380px;
+}
+
+button{
+    margin-top: 10px;
+    display: inline-block;
+    background-color:#0a0a23;
+    color: #fff;
+    border:none;
+    border-radius:10px;
+    box-shadow: 0px 0px 2px 2px rgb(0,0,0);
+}
+
+.comment{
+    border-bottom: 1px solid #888;
+}
+
+.comment p{
+    color: #0e0202;
+    font-size: 8px;
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+.comment h4{
+    margin: 0;
+    color: #333;
+}
+
+h6{
+    margin-top: 0;
+}
+
+@media screen and (max-width: 960px) {
+    body {
+        padding: 20px;
+    }
+
+    .sidebar,
+    .saidbar-content {
+        padding: 10px;
+        padding-bottom: 0px;
+    }
+
+    .main-content {
+        padding: 40px;
+        padding-bottom: 0px;
+    }
+
+    img {
+        width: 250px;
+        height: 320px;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+    body {
+        padding: 12px;
+    }
+
+
+    .sidebar {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .wrapper {
+        flex-direction: column;
+    }
+
+
+    .comments_chaild {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 16px;
+    }
+
+    button {
+        margin-top: 0px;
+        margin-bottom: 4px;
+    }
+
+    textarea {
+        width: 80%;
+        margin-right: 0 auto;
+        margin-left: 0 auto;
+    }
+
+    body {
+        padding: 15px;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    img {
+        width: 100%;
+        height: 40%;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+}

@@ -29,13 +29,13 @@ def registration():
 @app.errorhandler(401)
 @app.errorhandler(404)
 def page_not_found(error):
-    return render_template('not_found.html')
+    return render_template('error.html', error_code = error.code), error.code
 
 
 @app.route("/resume/", methods = ["POST", "GET"])
 def resume():
     if "userLogged" not in session:
-        return make_response(render_template("not_found.html"), 401)
+        abort(401)
     db = get_db()
     dbase = FDataBase(db)
 

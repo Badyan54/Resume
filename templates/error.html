@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{error_code}}</title>
+</head>
+<body>
+    <div class="box">
+        <div class="error">
+            <h1>
+                {% if error_code == 401 %}
+                Ви не аутентифікувалися
+                {% else %}
+                Сторінку не знайдено, 
+                {% endif %}
+                <p><a href="{{ url_for('registration')}}">зареєструватися</a></p>
+            </h1>
+</div>
+    </div>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+    body{
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    background-image: url('{{ url_for("static", filename="img/snow.jpg") }}');
+    }
+    .box {
+        font-family: arial;
+        font-size: 24px;
+        margin: 25px;
+        width: 350px;
+        height: 200px;
+
+        position: relative;
+    }
+
+    .error {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -25px 0 0 250px; 
+        }
+    
+    </style>
+
+</body>
+</html>
