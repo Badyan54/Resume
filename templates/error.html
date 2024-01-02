@@ -28,25 +28,21 @@
         height: 100vh;
         background-repeat: no-repeat;
         background-size: cover;
-
-    background-image: url('{{ url_for("static", filename="img/snow.jpg") }}');
+        background-image: url('{{ url_for("static", filename="img/snow.jpg") }}');
     }
     .box {
-        font-family: arial;
-        font-size: 24px;
-        margin: 25px;
-        width: 350px;
-        height: 200px;
-
+        height: 10em;
         position: relative;
+        margin: 0;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%) 
+
     }
 
-    .error {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin: -25px 0 0 250px; 
-        }
+
     
     </style>
 
